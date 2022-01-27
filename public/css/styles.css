@@ -45,17 +45,12 @@ h1 span {
   width: 80%;
 }
 p {
-  /* padding-right: 1.5rem;
-  padding-left: 1.5rem; */
   text-align: center;
   color: var(--DesaturatedRed);
   line-height: 1.5rem;
 }
 form {
-  /* margin-left: auto;
-  margin-right: auto; */
   position: relative;
-  /* width: 80%; */
   margin-bottom: 3rem;
 }
 
@@ -119,6 +114,14 @@ form [required]:invalid {
     visibility: visible;
     opacity: 1;
   }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
 @media screen and (min-width: 768px) {
   main img:nth-child(1) {
