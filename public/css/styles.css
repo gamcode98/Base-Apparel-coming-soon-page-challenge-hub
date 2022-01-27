@@ -133,28 +133,44 @@ form [required]:invalid {
   }
 }
 @media screen and (min-width: 1024px) {
+  body {
+    overflow-y: hidden;
+  }
   .wrapper {
-    width: 60%;
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
   }
   main {
+    background-image: url(../assets/images/bg-pattern-desktop.svg);
     display: grid;
-    grid-template-columns: (2, auto);
-    grid-template-rows: (3, auto);
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
   }
   header {
     grid-column: 1/2;
     grid-row: 1/2;
   }
+  main img:nth-child(1) {
+    margin-left: initial;
+    margin-right: initial;
+  }
   main img:nth-child(2) {
     grid-column: 2/3;
     grid-row: 1/4;
+    max-height: 100vh;
   }
   .grid-left {
     grid-column: 1/2;
     grid-row: 2/3;
-    border: 1px solid blue;
+  }
+  h1 {
+    text-align: left;
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+  p {
+    text-align: left;
   }
   footer {
     grid-column: 1/2;
