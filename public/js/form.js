@@ -16,8 +16,11 @@ export default function contactFormValidations() {
               d="M13.256 6v9.056h-2V6h2zm-.944 12.464c-.384 0-.699-.104-.944-.312a1.027 1.027 0 0 1-.368-.824c0-.33.125-.608.376-.832.25-.224.563-.336.936-.336.373 0 .68.112.92.336.24.224.36.501.36.832 0 .341-.117.616-.352.824-.235.208-.544.312-.928.312z" />
           </g>
         </svg>`;
-  $form.insertAdjacentElement("beforeend", $span);
-  $form.insertAdjacentElement("beforeend", $div);
+  $input.insertAdjacentElement("afterend", $span);
+  $input.insertAdjacentElement("afterend", $div);
+
+  // d.getElementById($input.name).classList.add("is-active"),
+  //   $span.classList.add("is-active");
 
   d.addEventListener("keyup", (e) => {
     if (e.target.matches("form [required]")) {

@@ -26,35 +26,38 @@
 
 <body>
   <main>
-    <header>
+    <header class="wrapper">
       <img src="./assets/images/logo.svg" alt="logo" width="120">
     </header>
-    <img src="./assets/images/hero-mobile.jpg" alt="hero-mobile">
-    <h1>
-      <span>We're</span> <br> coming <br> soon
-    </h1>
-    <p>
-      Hello fellow shoppers! We're currently building our new fashion store.
-      Add your email below to stay up-to-date with announcements and our launch deals.
-    </p>
-    <form>
+    <img src="./assets/images/hero-mobile.jpg" alt="hero-mobile" id="hero-image">
+    <div class="wrapper grid-left">
+      <h1>
+        <span>We're</span> <br> coming <br> soon
+      </h1>
+      <p>
+        Hello fellow shoppers! We're currently building our new fashion store.
+        Add your email below to stay up-to-date with announcements and our launch deals.
+      </p>
+      <form>
+        <input type="email" name="email" title="Please provide a valid email" placeholder="Email Address"
+          pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+        <button type="submit">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20">
+            <path fill="none" stroke="#FFF" stroke-width="2" d="M1 1l8.836 8.836L1 18.671" />
+          </svg>
+        </button>
 
-      <input type="email" name="email" title="Please provide a valid email" placeholder="Email Address"
-        pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
-      <button type="submit">
-        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20">
-          <path fill="none" stroke="#FFF" stroke-width="2" d="M1 1l8.836 8.836L1 18.671" />
-        </svg>
-      </button>
 
-    </form>
+      </form>
+
+    </div>
+    <footer>
+      <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Gamcode</a>.
+      </p>
+    </footer>
   </main>
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
 
   <script src="./js/index.js" type="module"></script>
 </body>

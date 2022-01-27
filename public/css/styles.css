@@ -17,11 +17,10 @@ body {
   background-image: var(--Linear-first);
 }
 header {
-  padding: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
-main {
-  margin-bottom: 2rem;
-}
+
 main img:nth-child(2) {
   width: 100%;
   display: block;
@@ -40,18 +39,26 @@ h1 span {
   font-weight: 400;
   color: var(--DesaturatedRed);
 }
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
 p {
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
+  /* padding-right: 1.5rem;
+  padding-left: 1.5rem; */
   text-align: center;
   color: var(--DesaturatedRed);
   line-height: 1.5rem;
 }
 form {
-  display: flex;
-  justify-content: center;
+  /* margin-left: auto;
+  margin-right: auto; */
   position: relative;
+  /* width: 80%; */
+  margin-bottom: 3rem;
 }
+
 input::placeholder {
   color: var(--DesaturatedRed);
 }
@@ -60,15 +67,16 @@ input {
   background-image: var(--Linear-first);
   border: 1px solid var(--DesaturatedRed);
   padding: 0.7rem 1.2rem;
-  width: 60%;
-  margin-left: 2rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 button {
   border-radius: 1.3rem;
   border: none;
-  width: 3.3rem;
-  position: relative;
-  right: 2rem;
+  width: 3.5rem;
+  height: 2.5rem;
+  right: 0;
+  position: absolute;
   color: white;
   font-size: 1.5rem;
   background-image: var(--Linear-second);
@@ -84,13 +92,13 @@ form [required]:invalid {
 .icon-error {
   position: absolute;
   top: 0.5rem;
-  right: 6.5rem;
+  right: 4rem;
 }
 .email-form-error {
   position: absolute;
   transition: all 800ms ease;
-  bottom: -1.5rem;
-  left: 4rem;
+  bottom: -1.8rem;
+  left: 1.3rem;
 }
 .icon-error.is-active,
 .email-form-error.is-active {
@@ -110,5 +118,46 @@ form [required]:invalid {
   100% {
     visibility: visible;
     opacity: 1;
+  }
+}
+@media screen and (min-width: 768px) {
+  main img:nth-child(1) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .wrapper {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .wrapper {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  main {
+    display: grid;
+    grid-template-columns: (2, auto);
+    grid-template-rows: (3, auto);
+  }
+  header {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  main img:nth-child(2) {
+    grid-column: 2/3;
+    grid-row: 1/4;
+  }
+  .grid-left {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    border: 1px solid blue;
+  }
+  footer {
+    grid-column: 1/2;
+    grid-row: 3/4;
   }
 }
